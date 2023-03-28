@@ -14,6 +14,7 @@ import wikiwiki
 
 discord_token = os.environ["DISCORD_TOKEN"]
 wikiwiki_password = os.environ["WIKIWIKI_PASSWORD"]
+bot_channel_id = int(os.environ["BOT_CHANNEL_ID"])
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -29,7 +30,7 @@ async def loop():
     if (now.hour, now.minute) == (15, 0):
         global wikiwiki_token
         wikiwiki_token = wikiwiki.get_token(wikiwiki_password)
-        await client.get_channel(1087593333012045926).send(era.get_time())
+        await client.get_channel(bot_channel_id).send(era.get_time())
 
 
 @client.event
