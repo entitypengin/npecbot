@@ -383,6 +383,6 @@ def get_time() -> str:
     n = (shifted.date() - datetime.date(year=shifted.year, month=1, day=1)).days
     calendar = generate_calendar(shifted.year)
 
-    return f""">>> `CE {ce_now.year}-{ce_now.month}-{ce_now.day} {ce_now.time()}`
-`VE {shifted.year}-{calendar[n]} {shifted.time()}`
+    return f""">>> `CE {ce_now.strftime("%Y-%m-%d %H:%M:%S")}`
+`VE {shifted.year:04}-{calendar[n]} {shifted.strftime("%H:%M:%S")}`
 (https://wikiwiki.jp/metroproj/%E9%80%A3%E5%90%88%E6%9A%A6)"""
