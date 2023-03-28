@@ -13,7 +13,11 @@ def get_token(password: str) -> str:
         "Content-Type": "application/json",
         "password": password,
     }
-    return requests.post("https://api.wikiwiki.jp/metroproj/auth", json=header, timeout=3.0).json()["token"]
+    return requests.post(
+        "https://api.wikiwiki.jp/metroproj/auth",
+        json=header,
+        timeout=3.0
+    ).json()["token"]
 
 
 def get_characters_page(token: str) -> Dict[str, str]:
@@ -46,9 +50,9 @@ def get_character(token: str, id_: str) -> str:
             names.append(m["name2"].replace(" ", "").replace("・", ""))
 
         if id_.replace(" ", "").replace("・", "") in (
-            match["id"].strip().strip(),
-            match["name"].strip().replace(" ", "").replace("・", ""),
-            *names,
+                match["id"].strip().strip(),
+                match["name"].strip().replace(" ", "").replace("・", ""),
+                *names,
         ):
             profile_match = re.fullmatch(
                 r"(?P<datas>(\|.*?\|.*?\|\s)+)(?P<text>(.|\s)*?)Made by \[\[(?P<author>.*?)>メンバー#\w+]]",

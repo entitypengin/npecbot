@@ -11,7 +11,6 @@ import era
 from server import keep_alive
 import wikiwiki
 
-
 discord_token = os.environ["DISCORD_TOKEN"]
 wikiwiki_password = os.environ["WIKIWIKI_PASSWORD"]
 bot_channel_id = int(os.environ["BOT_CHANNEL_ID"])
