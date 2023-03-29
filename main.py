@@ -46,7 +46,7 @@ async def on_message(message):
     if message.author.bot:
         return
     if message.content.startswith("npec/help"):
-        await message.channel.send("https://entitypengin.github.io/metroprojbot/")
+        await message.channel.send("https://entitypengin.github.io/npecbot/")
     if message.content.startswith("npec/time"):
         await message.channel.send(era.get_time())
     if message.content.startswith("npec/char"):
