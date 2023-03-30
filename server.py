@@ -11,7 +11,7 @@ app = Flask("")
 
 @app.route("/")
 def main():
-    return "Npec bot is alive!"
+    return "Npec bot is alive"
 
 
 def run() -> None:
