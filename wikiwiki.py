@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
-from typing import *
-
 import re
 
 import requests
@@ -20,7 +17,7 @@ def get_token(password: str) -> str:
     ).json()["token"]
 
 
-def get_characters_page(token: str) -> Dict[str, str]:
+def get_characters_page(token: str) -> dict[str, str]:
     header = {
         "Authorization": f"Bearer {token}",
     }

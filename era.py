@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from typing import List
-
 import datetime
 
 
-def generate_calendar(year: int) -> List[int]:
+def generate_calendar(year: int) -> list[int]:
     return [
         "00-00",
         "00-01",
