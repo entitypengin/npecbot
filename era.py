@@ -383,4 +383,4 @@ def get_time() -> str:
 
     return f""">>> `CE {ce_now.strftime("%Y-%m-%d %H:%M:%S")}`
 `VE {shifted.year:04}-{calendar[n]} {shifted.strftime("%H:%M:%S")}`
-(https://wikiwiki.jp/metroproj/%E9%80%A3%E5%90%88%E6%9A%A6)"""
+(https://wikiwiki.jp/npec/%E9%80%A3%E5%90%88%E6%9A%A6)"""
