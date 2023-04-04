@@ -11,7 +11,7 @@ def get_token(password: str) -> str:
         "password": password,
     }
     return requests.post(
-        "https://api.wikiwiki.jp/metroproj/auth",
+        "https://api.wikiwiki.jp/npec/auth",
         json=header,
         timeout=3.0
     ).json()["token"]
@@ -22,7 +22,7 @@ def get_characters_page(token: str) -> dict[str, str]:
         "Authorization": f"Bearer {token}",
     }
     return requests.get(
-        "https://api.wikiwiki.jp/metroproj/page/Metropolitan%20Project"
+        "https://api.wikiwiki.jp/npec/page/Metropolitan%20Project"
         "/%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC",
         headers=header,
     ).json()
